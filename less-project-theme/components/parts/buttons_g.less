@@ -1,0 +1,116 @@
+// out: null
+// global styles 
+/* Buttons =================================================== */
+
+// In drupal we don't have access to the <a> to directly add a class so we need to do it via .btn a
+
+/*Classes
+// .btn (the wrppaer of the a or button)
+// .btn a, .btn button (the button)
+
+// Modifiers -------------------
+    .btn--style-1 (solid) and default
+    .btn--style-2 (ghost)
+
+*/
+
+.o-btn {
+    margin-top: 1.25em;   
+}
+
+// drop the focus safe to do as we have a focus 
+button, .o-btn a {
+    &:focus {
+        //outline: 2px solid #99ccff;
+        outline: 0;
+    }
+}
+
+.o-btn a {
+display : inline-block;
+margin : 0.5em 0; // 12px 0 12px
+padding : 0.5em 1em; // height 48px; 
+font-size: @basefontsize;
+font-weight: 700;
+line-height: 1.5;
+text-transform: uppercase;
+text-align: center;
+text-decoration : none;
+.letterspacing60();
+color : @white;
+// border radius if required 
+//.rounded(1.5em);
+cursor : pointer;
+// background function
+background-color : @btnbackgroundcolor;
+.transition(all @duration-slowly ease-in-out); 
+    
+    &:hover, &:active, &:focus {
+        opacity: .8;
+         
+    }
+    
+.lt-ie8 & {
+    .has-layout();    
+    }
+.lt-ie7 & {
+    display: block;
+    }
+}
+
+/* Modifiers ------------------- */
+
+
+// Ghost
+.btn--style-2 a {
+    border: 2px solid @grey;
+    color: @grey;
+    background : none;
+    &:hover, &:active, &:focus {
+        background: @grey;
+        color: @white;
+    }
+    
+}
+
+
+//component in situe
+.o-splash__btn[class*='--style-2'] a {
+    border-color: @white;
+    color: @white;
+    &:hover {
+        border-color : @btnbackgroundcolor;
+    }
+   &:active, &:focus {
+        border-color: lighten(@btnbackgroundcolor, 1%);
+    }
+    
+}
+
+.d-section--video,
+.d-section--style-banner-1{
+    .o-btn{
+        a{
+            color: inherit;
+            padding: 0 1.25em 0 0;
+            position: relative;
+            background: none;
+            text-transform: none;
+            &:after{
+                background: url('../img/right_arrow.png') no-repeat right center;
+                content: '';
+                width: 1em;
+                height: 1.35em;
+                position: absolute;
+                right: 0;
+                top: .1em;
+            }            
+        }
+    }
+}
+.d-section--video .o-btn a{
+    margin: 0;
+    &:after{
+        background: url('../img/right_gray_arrow.png') no-repeat right center;
+    }
+}

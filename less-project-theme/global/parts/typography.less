@@ -1,0 +1,222 @@
+// out: null
+/* Typography =================================================== */
+/*uses: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+/* Define your base font-size html; most elements will inherit this. */
+/* Assuming 16px... */
+/* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) */
+
+/* These handle massive type, for less frequently occuring bits of text (e.g. in mastheads and banners). */
+.giga {
+    .giga();
+
+}
+.mega {
+    .mega();
+
+}
+.kilo {
+    .kilo();
+
+}
+
+/* Define headings and their associated classes here. */
+h1 {
+    .alpha--margin();
+
+}
+h2 {
+    //.beta--margin();
+    .kilo();
+    letter-spacing: 2px;
+    .min-width-max(1em{
+        font-size: 2em;
+    }29.9999em);
+}
+h3 {
+    .gamma--margin();
+
+}
+h4 {
+    .delta--margin();
+
+}
+h5 {
+    .epsilon--margin();
+  
+}
+h6 {
+    .zeta--margin();
+    
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: @font-stack__headingfont;
+}
+
+.the-measure h3{
+    font-family: @basefont;
+    font-size: @basefontsize;
+    font-weight: bold;
+}
+/* Smaller-than-body-copy sizes here. */
+small {
+    .milli();
+}
+
+p,
+address { 
+font-size: @basefontsize;
+line-height: @baseline;
+}
+ol, 
+ul, 
+dl{
+    font-size: 1em;
+} 
+// paragraphs 
+p {
+  margin-top: 1em; 
+}
+
+// lists 
+
+ul, 
+ol{ 
+    margin-top: 0;
+    padding : 0 0 0 @baselineunit;
+      list-style-position: inside;
+}
+
+ul {
+    list-style-type: square;   
+}
+    
+ol {
+    list-style-type: decimal; 
+}
+
+ul li, 
+ol li { 
+    margin-top: (@baseline/2 * 1em);
+}
+
+li li {
+   margin-top: (@baseline/4 * 1em); 
+}
+
+// definition lists
+dt { 
+margin-top: 0.75em;
+padding-bottom: 0.6875em;
+border-bottom: 1px dashed @grey--light-3;
+font-weight : bold;
+
+}
+dt + dd {
+    margin-top: (@baseline/2 * 1em);
+}
+
+// blockquote and figure text
+
+// see Elements
+
+
+// text-level
+
+abbr[title] { 
+border-bottom : 1px dotted @grey--light-3; 
+cursor : help; }
+
+b, strong, em { 
+//font-family: @font-stack__open;
+font-style: normal;
+font-weight : 700; }
+
+i {
+font-style: italic;
+}
+
+dfn { 
+font-style : italic; }
+
+ins { 
+background-color : lighten(@basecolor, 75%); 
+color : @textcolor; 
+text-decoration : none; }
+
+mark { 
+background-color : lighten(@basecolor, 75%); 
+color : @textcolor; 
+font-style : italic; 
+font-weight : bold; }
+
+pre, 
+code, 
+kbd, 
+samp {
+padding: 0 0.25em;
+font-family : @font-stack__codefont;
+font-size: @basefontsize;
+line-height : @baselineunit; }
+
+pre { 
+white-space : pre; 
+white-space : pre-wrap; 
+word-wrap : break-word; 
+overflow: auto;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+time {
+    font-weight: 700;
+    color: @basecolor;
+}
+
+/* =========================================================
+    Basic Typography classes 
+   =========================================================  */
+
+
+// Use a measure to contstrain max length 
+//.the-measure 
+//.s-the-measure (Scope area for the text style from the wysiwyg text area as youdon't have access to classes)
+
+
+.copy, .the-measure {
+    .themeasurelg();
+    margin: 0;
+    .min-width(48em{
+        margin: 0 auto;
+    });
+}
+
+.webform-component--step-2--payment-methods img{
+    display: inline-block;
+    margin: 0 .75em 0 0;
+}
+.actual-width{
+    width: auto;
+}
+
+//Type in the measure you don't have access to 
+//.s-the-measure p
+
+// in stitu ----------------------------------
+
+//.grid .the-measure
+
+

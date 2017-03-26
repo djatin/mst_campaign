@@ -1,0 +1,62 @@
+// out: null
+
+// global styles 
+/* !wrappers --------------------------------------------------- */
+/* clases
+.wrapper (generic class )
+
+.banner__wrapper
+.main__wrapper 
+.header__warpper
+.admin__wrapper
+.contentinfo__wrapper (see contentinfo role)
+
+section (semantic wrapper)
+.section (class of wrapper, incase div is use instead of section)
+.section__wrapper 
+
+.the-measure (text wrapper)
+
+// modifiers 
+.wrapper--page (whole site wrapper)
+*/
+
+.wrapper {
+   margin: 0 auto;
+}
+
+.banner__wrapper {
+    overflow: hidden;
+    padding: 0.75em;
+}
+
+.header__wrapper, .admin__wrapper, .wrapper--max-w {
+    .seven-eighths();
+    max-width: 78em;
+}
+
+.header__wrapper, .admin__wrapper {
+        padding: 0.75em 0;
+}
+
+.section__wrapper {
+    //padding: 3em 0;
+    margin: 4.6875% 0;
+    padding: 0 4.6875%;
+}
+
+
+// Modifiers
+.wrapper--page {
+    max-width: 40em;
+    position: relative;
+    background-color: @bck-color-base;
+    .lt-ie7 & {
+        width: 40em;   
+    }
+}
+
+
+// Component in situ 
+
+

@@ -1,0 +1,72 @@
+// out: null
+
+// global styles 
+/* !wrappers --------------------------------------------------- */
+/* clases
+.wrapper (generic class )
+
+.banner__wrapper
+.main__wrapper 
+.header__warpper
+.admin__wrapper
+.contentinfo__wrapper (see contentinfo role)
+
+section (semantic wrapper)
+.section (class of wrapper, incase div is use instead of section)
+.section__wrapper 
+
+.the-measure (text wrapper)
+
+// modifiers 
+.wrapper--page (whole site wrapper)
+*/
+
+.wrapper {
+   margin: 0 auto;
+}
+
+.banner__wrapper {
+    overflow: hidden;
+    padding: 0.75em 0;
+}
+
+.header__wrapper, .admin__wrapper, .wrapper--max-w, .banner__wrapper, .contentinfo__wrapper, .navigation__wrapper {
+    .seven-eighths();
+    max-width: 75em;
+}
+
+.header__wrapper, .admin__wrapper {
+        padding: 0.75em 0;
+}
+
+.section__wrapper {
+    //padding: 3em 0;
+    margin: 2% 0;
+    padding: 2em 0;
+}
+
+
+// Modifiers
+.wrapper--page {
+    max-width: 100em;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    background-color: @bck-color-base;
+    .lt-ie7 & {
+        width: 40em;   
+    }
+}
+#donation-form {
+    margin-bottom: 4em;
+    .wrapper--max-w{
+        position: relative;
+        .hgroup__title{
+            .visually-hidden();
+        }
+    }
+}
+
+// Component in situ 
+
+

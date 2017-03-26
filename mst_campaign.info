@@ -1,0 +1,6 @@
+name = MS Trust Campaign Microsite
+description = MS Trust Campaign Microsite
+core = 7.x
+base theme = common
+
+scripts[] = js/theme-scripts.js

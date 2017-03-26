@@ -1,0 +1,87 @@
+// out: null
+// Media Queries for component
+
+/* !logos --------------------------------------------------- */
+/* classes
+.logo (surrounding div)
+.logo--site (surrounding div of the site banner)
+.logo__link (a tag)
+.logo__text
+.logo__name
+.logo__strapline
+*/
+//.logo {
+	// 1px/0.0625em
+    /*.min-width(0.0625em; {
+        
+    });*/
+//}
+
+.logo__link {
+    .min-width(1em; {
+        width: @siteLogoWidth;
+        height: @siteLogoHeight;
+        background: none;
+    });
+}
+
+// hide the image
+    .logo__img {
+        // 1px/0.0625em
+        .min-width(0.0625em; {
+            width: 100%;
+            height: auto;
+        });
+    }
+
+.logo__link {
+        // 1px/0.0625em
+        .min-width(0.0625em; {
+            // show just the icon till you have space for the whole logo
+            //background: url('../img/skin/no-svg_logo.png') left top no-repeat;
+        });
+        
+    }
+    // if background size use the double size image 
+    .backgroundsize .logo__link {
+        // 1px/0.0625em
+        .min-width(0.0625em; {
+            /*background-image: url('../img/skin/no-svg_logo@x2.png'); 
+            background-size: 100% auto;*/
+        });
+   }
+    // if svg use the svg of the logo
+    .svg .logo__link {
+        // 1px/0.0625em
+        .min-width(0.0625em; {
+           //background-image: url('../img/skin/svg_logo.svg'); 
+        });
+    }
+    // dirty hack for opera mini as it doesn't handle svg background images well
+    x:-o-prefocus, .svg .logo__link {
+        // 1px/0.0625em
+        .min-width(0.0625em; {
+            //background-image: url('../img/logo.jpg');
+        });
+    }
+
+
+
+.contentinfo .logo {
+    .min-width(48em{
+        float: right;
+        margin: 0 0 0 6%;
+    });
+    a{
+        display: inline-block;
+        background: none;
+        width: auto;
+        max-height: 5em;
+        img{
+            display: block;
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+// Media Queries for component insitue

@@ -1,0 +1,86 @@
+// out: null
+
+// global styles 
+/* !Footers --------------------------------------------------- */
+/* clases
+.footer (generic footer class)
+.contentinfo (generic class based on role="contentinfo" )
+
+*/
+
+
+.contentinfo {
+    margin-top: 3em;
+    /*background: @footerbg;
+    color: @footertextcolor*/
+}
+
+.contentinfo__section-title {
+    .gamma ();
+    color: @white; 
+    text-transform: uppercase;
+    &.connect__title{
+        .visually-hidden();
+    }
+}
+
+.contentinfo__section-title a {
+    color: inherit;   
+}
+
+.contentinfo p {
+    margin: 0 0 .625em;
+    .milli ();
+    color: #333;
+    a{
+        color: #333;
+        text-decoration: none;
+        &:hover{
+            color: lighten(#333, 30%);
+        }
+    }
+}
+.contentinfo .big-social-media__list{
+    padding: 0;
+    list-style: none;
+    li{
+        display: inline-block;
+        margin-top: 0;
+        margin-right: .4em;
+        margin-left: 0;
+        position: relative;
+        float: left;
+        a{
+            &:hover{
+                opacity: .8;
+            }
+            svg{
+                fill: @white;
+                width: 1.375em;
+                height: 1.375em;
+                margin: -.6875em 0 0 -.6875em;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 1;
+            }
+        }
+    }
+    .big-social-media__btn, .big-social-media__icon, .big-social-media__item{
+        width: 2.3125em;
+        min-width: 2.3125em;
+        min-height: 2.3125em;
+        height: 2.3125em;
+    }
+}
+.big-social-media__label{
+    .visually-hidden();
+}
+.big-social-media{
+    margin: 0;
+}
+// Component in situ 
+//.warning .name-space-component {
+    //color: blue;
+//}
+

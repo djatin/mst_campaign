@@ -1,0 +1,394 @@
+// out: null
+// Media Queries for component
+
+/* !webforms --------------------------------------------------- */
+// Styles for DRUPAL FORMS
+/* clases
+.form (gerneric all forms)
+.webform-client-form (the form)
+.form__wrapper
+
+basic mark up
+- <div .webform-component
+--- label
+----- input (form-text, form-textarea, form-select, form-email)
+- </div>
+*/
+
+/*types
+-markup (area code)
+-select
+-textfield
+-number (same as textfield)
+-textarea
+-checkboxes
+-radio
+-permission (text area)
+-date
+
+*/
+
+
+ 
+/*///////////////////////////////////////////////////////////
+
+    Webforms
+
+//////////////////////////////////////////////////// */
+
+//local varible 
+@small_major: 18.5em; //300px as we still waht opera mini to work
+
+// make these infield top aligned 
+//http://uxmovement.com/forms/why-infield-top-aligned-form-labels-are-quickest-to-scan/
+//only for browsers that can cope with this so from 320px up 
+
+.min-width(@small_major {
+
+// nest all this should happen in the grid if its not in a grid there is a reason and shouldn't get this styling
+.o-grid { 
+    
+    //alternative setups div becomes the input - select, radios, check boxes, date, etc
+    // We are going to tidy this up more
+    .webform-component-date .form-item {
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+    min-width: 4.5em; 
+    .one-quarter();
+    }
+    
+// End nest
+}
+
+//end @small_major
+});
+
+
+// Media Queries for component in situ
+// 320px/20em
+.min-width(20em; {
+
+.contentinfo__newsletter {
+        max-width: 22.5em;
+}
+    
+.contentinfo__newsletter form {
+    position: relative;   
+}
+  
+.contentinfo__newsletter .webform-component-email {
+        margin: 0;
+        .golden-section--lg();
+}
+
+.contentinfo__newsletter .form-actions {
+    
+    .golden-section--sm();
+    position: absolute;
+    right: 0;
+    bottom: -0.1875em; //-3px mathc button margin
+    overflow: visible;
+}
+    
+    .contentinfo__newsletter .webform-submit {
+        //at some widths this can become compressed so reduce the padding and make sure the text doesn't wrap
+        padding-left: 0.375em;
+        padding-right: 0.375em;
+        white-space: nowrap;
+        //position: absolute;
+        //bottom: -4.875em; //78px
+
+    }
+    
+    .contentinfo__newsletter .webform-component--privacy-statement  {
+        .clear-both();
+    } 
+
+    .placeholder .contentinfo__newsletter .webform-submit {
+        .one-whole();
+        //bottom: auto;
+        //top:-0.375em; //shift it up to account for the margin
+    }
+    
+});
+form{
+    max-width: 50em;
+    margin: auto;
+    position: relative;
+    min-height: 23em;
+    .form-actions__added{
+        margin-top: 1.5em;
+        .min-width(48em{
+            position: absolute;
+            right: 0;
+            top: 17.4em;
+            margin-top: 0;
+            .big-payment__button{
+                width: auto !important;
+                display: inline-block;
+                margin: 0 .25em .0625em;
+                button{
+                    width: auto !important;
+                    line-height: normal;
+                    background: @basecolor;
+                    padding: .75em 2.5em .75em !important;
+                }
+            }
+        });
+    }
+    .payment-notice{
+        margin: .5em;
+    }
+    .payment-amount{
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-left: .12em;
+    }
+    .big-payment-iframe{
+        background: url(../img/progress-throbber.gif) no-repeat 20% 20%;
+        max-height: 25em;
+    }
+    .webform-component--step-2--personal-details,
+    .webform-component--step-2--personal-details--address-details{
+        > .form-item{
+            padding: 0;
+            min-height: inherit;
+            border: none;
+            background: transparent;
+            padding: 0 1em;
+            overflow: visible;
+            label{
+                width: 100%;
+                .min-width(38em{
+                    float: left;
+                    max-width: 20%;
+                    margin-top: .75em;
+                });
+            }
+            .form-text, .form-select, .form-textarea{
+                width: 100%;
+                border: 1px solid @grey-color-20;
+                &:focus{
+                    border-color: transparent;
+                }
+                .min-width(38em{
+                    float: left;
+                    width: 28em;
+                    max-width: 80%;
+                });
+            }
+            &:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+    }
+    .webform-component--step-2--personal-details--address-details--address-2,
+    .webform-component--step-2--personal-details--address-details--address-line-3{
+        .min-width(38em{
+            margin-left: 19% !important;
+        });
+    }
+    .webform-component--step-2--personal-details,
+    .webform-component--step-2--gift-aid-fieldset,
+    .webform-component--step-2--keeping-in-touch{
+        padding-bottom: 1em;
+        //border-bottom: 1em solid @white;
+        > .form-item{
+            padding: 0 1em;
+        }
+    }
+    .webform-component--step-2--payment-methods p{
+        padding: 0 1em;
+        margin-top: 1em !important;
+    }
+    .webform-component-fieldset--step-2{
+        > legend{
+            position: absolute;
+            top: 0;
+            padding: 0 1em;
+            span{
+                color: #0d7dcd;
+            }
+        }
+        fieldset{
+            background: #f2f2f2;
+            overflow: visible;
+        }
+        legend{
+            padding: 0.25em 1em;
+            background: @basecolor;
+            margin-left: -.75em;
+            span{
+                margin-top: 0;
+                color: @white;
+            }
+        }        
+        .payment-notice{
+            padding: 0 1em;
+        }
+        .form-actions__added{
+            margin-left: 1em;
+            .min-width(48em{
+                margin-top: -4em;
+                top: inherit;
+                right: 1em;
+             });
+             .big-payment__button{
+                 margin: .625em 0;
+             }
+            .previous-page-button button{
+                background: none;
+                color: #5d5d5d;
+                text-transform: none;
+            }
+        }
+    }
+    .webform-component--step-1 > legend span{
+        font-size: 1.25em;
+    }
+    .js-toggle--show-more{
+        background: none;
+        border: none;
+        padding: 0;
+        margin-top: .5em;
+        .js-toggle__text{
+            display: block;
+            position: relative;
+            text-decoration: underline;
+            text-transform: capitalize;
+        }
+        &.is-active .js-toggle__text{
+            color: transparent;
+            &:after{
+                content: 'Read Less';
+                color: @textcolor;
+                display: block;
+                position: absolute;
+                top: 0;
+                text-decoration: underline;
+            }
+        }
+    }
+    .show-more{
+        display: none;
+        will-change: height;
+        margin-top: 1em;
+    }
+    .form-item--tight{
+        margin-bottom: 0;
+        padding-right: 0 !important;
+    }
+}
+.big-payment{
+    .single-payment{
+        position: relative;
+         .min-width(48em{
+           position: static; 
+        });
+        .set-amount{
+            .min-width(48em{
+                position: absolute;
+                width: 40%;
+                right: 0; 
+                margin-top: 1.5em;
+            });
+            span.fieldset__legend{
+                margin-top: 0;
+            }
+            .big_payment__ui-slider-wrapper{
+                width: 93%;
+                margin-left: 4%;
+            }
+        }
+    }
+    .prompts{
+        max-width: 20em;
+        .prompt__title{
+            display: block;
+            span{
+                display: block;
+                font-size: 3em;
+                font-weight: bold;
+            }
+        }
+        .min-width-max(1em{
+            margin: 4em auto 0;
+            text-align: center;
+            .prompt{
+                height: 20em;
+            }
+        }47.9999em);
+    }
+    fieldset.other-amount{
+        .min-width(48em{
+            top: 15.9em;
+            position: absolute;
+            right: 0;
+            width: 40%;
+            .form-type-textfield{
+                max-width: 8em;
+                position: relative;
+                &:before{
+                    z-index: 1;
+                    left: 1.5em !important;
+                    top: 50% !important;
+                    margin-top: -10px;
+                }
+            }
+        });
+        .min-width-max(1em{
+            top: 8.45em;
+            width: 100%;
+            .form-type-textfield:before{
+                z-index: 1;
+                left: 6.5em !important;
+                top: 50% !important;
+                margin-top: -10px;
+            }
+        }47.9999em);
+        .min-width-max(1em{
+            .form-type-textfield:before{
+                left: 3.5em !important;
+            }
+        }20em);
+    }
+}
+
+.min-width-max(1em{
+    .form-type-textfield, .big-payment__button, .js .webform-component-big-payment .set-amount .form-type-radio{
+        margin: .625em auto;
+        max-width: 20em;
+        width: 100% !important;
+    }
+}47.9999em);
+// SEE MODULE FOR BIG PAYMENT STYLING
+
+// SITE SPECIFIC ----------------------------------
+
+// Donate form ---------------------------------
+// Donate form currently uses webforms but this wil change in future versions
+
+/* Classes
+webform-client-form--donation
+
+
+
+*/
+
+/*// local mixin 
+.magic-width() { width:46.5%; }
+
+.min-width(@small_major {
+
+// Donate form styling ---
+.webform-client-form--donation .form-submit {
+    width: 100%;
+}
+    
+    
+});*/
+
+//BIG PAYMENT NOW MOVED TO MODULE
+    

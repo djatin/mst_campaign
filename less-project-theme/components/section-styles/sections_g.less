@@ -1,0 +1,63 @@
+// out: null
+
+// global styles 
+/* !Sections --------------------------------------------------- 
+    Core styles for the d-sections
+*/
+
+/* clases
+
+.d-section (basic drupal section)
+
+//modififers 
+.d-section--alignment-none (image above text default)
+.d-section--alignment-center(image on top with text centered)
+.d-section--alignment-left (media floated left)
+.d-section--alignment-right (media floated right)
+
+
+// Project specific modifiers 
+// these change from project to project and accect elemnts in the block
+.d-section--style-1 (normally a background color)
+.d-section--style-2 (normally a background color)
+*/
+
+.d-section--alignment-center {
+    text-align: center;   
+}
+
+.d-section--infographic{
+    background: @grey--light-5;
+    margin-bottom: 0;
+    .o-media__text{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
+
+// Component in situ 
+
+
+//Project specific components ---------------------------------
+
+
+.d-section--style-1 .section__o-splash {
+    background-color: @grey--dark-1;
+}
+
+.d-section--style-2 .section__o-splash {
+    background-color: @grey--dark-4;
+}
+
+.d-section--modification-1{
+    &:after{
+        display: block;
+        content: '';
+        height: 5em;
+        margin-top: 1.5em;
+        background: url(../img/section_divider.png) no-repeat center;
+    }
+    &.d-section--style-banner:after{
+        display: none !important;
+    }
+}

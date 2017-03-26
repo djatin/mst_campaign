@@ -1,0 +1,57 @@
+// out: null
+// Media Queries for component
+/* !Footers --------------------------------------------------- */
+/* clases
+.footer (generic footer class)
+.contentinfo (generic class based on role="contentinfo" )
+.contentinfo__wrapper 
+
+*/
+
+.contentinfo__wrapper {
+    position: relative;
+    .seven-eighths();
+    padding: 4em 0 1em;
+}
+
+
+//layout footer 
+.contentinfo__section {
+    //640px/40em 
+    .min-width(40em; {
+        //.one-half();
+    });
+}
+
+
+//.warning .name-space-component {
+    // 1px/0.0625em
+    //.min-width(0.0625em; { 
+     //   color: green;
+    //});
+//}
+
+.big-social-media__title{
+    .visually-hidden();
+}
+.contentinfo .big-social-media__list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.4em;
+    width: 100%;
+    background: @btnbackgroundcolor;
+    li a{
+        padding: .25em .25em 0;
+        display: inline-block;
+    }
+    .big-social-media__item--facebook a {
+        background-color: #306199;
+    }
+    .big-social-media__item--twitter a {
+        background-color: #55acee;
+    }
+    .big-social-media__item--youtube a {
+        background-color: #df1c31;
+    }
+}
